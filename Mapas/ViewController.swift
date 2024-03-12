@@ -16,6 +16,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     }
     
     var numPin = 0
+    let geocoder = CLGeocoder()
     
     @IBOutlet weak var segControl: UISegmentedControl!
     @IBOutlet weak var mapa: MKMapView! {
@@ -92,7 +93,22 @@ class ViewController: UIViewController, MKMapViewDelegate {
     @IBAction func addPin(_ sender: UIBarButtonItem) {
         numPin += 1
         let pin = Pin(num: numPin, coordinate: mapa.centerCoordinate)
-        mapa.addAnnotation(pin)
+        
+        geocoder.reverseGeocodeLocation(CLLocation(latitude: pin.coordinate.latitude, longitude: pin.coordinate.longitude)) { (placemarks, error) in
+                guard let placemark = placemarks?.first, error == nil else {
+                    pin.subtitle = "País desconocido"
+                    self.mapa.addAnnotation(pin)
+                    return
+                }
+                
+                if let country = placemark.country {
+                    pin.subtitle = country
+                    self.mapa.addAnnotation(pin)
+                } else {
+                    pin.subtitle = "País desconocido"
+                    self.mapa.addAnnotation(pin)
+                }
+            }
     }
     
 }

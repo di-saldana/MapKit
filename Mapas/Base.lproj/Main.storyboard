@@ -70,16 +70,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eo7-j4-6dH">
-                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Tjs-xn-X8M"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="eo7-j4-6dH" firstAttribute="leading" secondItem="Tjs-xn-X8M" secondAttribute="leading" id="7iT-Yv-eRx"/>
-                            <constraint firstItem="eo7-j4-6dH" firstAttribute="centerX" secondItem="Fsl-pM-KYu" secondAttribute="centerX" id="IMC-nf-39J"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="eo7-j4-6dH" secondAttribute="bottom" constant="-34" id="IUs-4U-AsQ"/>
-                            <constraint firstItem="eo7-j4-6dH" firstAttribute="top" secondItem="Tjs-xn-X8M" secondAttribute="top" id="xmu-lx-uDU"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="eo7-j4-6dH" secondAttribute="bottom" constant="-34" id="4Qq-E6-CUP"/>
+                            <constraint firstItem="eo7-j4-6dH" firstAttribute="centerY" secondItem="Fsl-pM-KYu" secondAttribute="centerY" id="5tq-Z2-b7V"/>
+                            <constraint firstItem="eo7-j4-6dH" firstAttribute="leading" secondItem="Tjs-xn-X8M" secondAttribute="leading" id="Zr4-ac-tRo"/>
+                            <constraint firstItem="eo7-j4-6dH" firstAttribute="centerX" secondItem="Fsl-pM-KYu" secondAttribute="centerX" id="htR-TR-olq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5Z7-zW-501"/>
