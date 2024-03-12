@@ -84,7 +84,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="5Z7-zW-501"/>
                     <connections>
-                        <outlet property="image" destination="eo7-j4-6dH" id="Pdg-Di-Lab"/>
+                        <outlet property="imageView" destination="eo7-j4-6dH" id="NO7-eb-99K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rxK-DQ-BGe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

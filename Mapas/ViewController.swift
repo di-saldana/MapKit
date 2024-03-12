@@ -65,7 +65,18 @@ class ViewController: UIViewController, MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        performSegue(withIdentifier: "DetalleImagen", sender: view)
+        if let pin = view.annotation as? Pin {
+            performSegue(withIdentifier: "DetalleImagen", sender: pin.thumbImage)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DetalleImagen" {
+            if let destinationViewController = segue.destination as? DetalleViewController,
+               let thumbnailImage = sender as? UIImage {
+                destinationViewController.thumbnailImage = thumbnailImage
+            }
+        }
     }
     
     @IBAction func seleccion(_ sender: UISegmentedControl) {

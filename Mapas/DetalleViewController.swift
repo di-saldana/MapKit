@@ -9,10 +9,15 @@ import UIKit
 
 class DetalleViewController: UIViewController {
     
-    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
+    var thumbnailImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        if let thumbnailImage = thumbnailImage {
+            imageView.image = thumbnailImage
+        }
     }
     
 
